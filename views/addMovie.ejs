@@ -5,11 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>
+        <%= myPageTitle %>
+    </title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Add Movie</h1>
+    <%- include('./partials/head') %>
+        <main>
+            <h1>add movies</h1>
+            <!-- <form action="/" method="POST">
+        <input type="text" name='title' placeholder="Title" required>
+        <input type="text" name='urlPicture' placeholder="Picture for Article" required>
+        <input type="text" name='author' placeholder="Author Name" required>
+        <input type="url" name='authorPic' placeholder="Picture of the Author" required>
+        <input type="message" name='text' placeholder="Your Article" required>
+        <input type="submit" value="SEND ARTICLE">
+    </form> -->
+        </main>
+        <%- include('./partials/foot') %>
 </body>
 
 </html>

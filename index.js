@@ -9,7 +9,7 @@ const PORT = process.env.PORT
 const random = Math.floor(Math.random() * (13 - 0 + 1) + 0)
 app.use(express.json()) // Um die Daten in json Format umzuwandeln
 app.use(express.urlencoded({ extended: true }))
-const appName = 'DESIGN SHOP'
+const appName = 'MMDB'
 const currentDay = new Date().toJSON().slice(0, 10).replace(/-/g, '/');
 const fileSyst = require('fs')
 // ...rest of the initial code omitted for simplicity.
@@ -18,6 +18,8 @@ const fileSyst = require('fs')
 const fetch = require('node-fetch');
 const Movie_Item = require('./models/movies.js')
 const movieRoutes = require('./routes/movieRoutes')
+const favoriteMovRoutes = require('./routes/favoriteMovRoutes')
+
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
 console.log(process.env.DB_URI)
@@ -46,3 +48,4 @@ mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology
     })
 
 app.use('/', movieRoutes)
+app.use('/', favoriteMovRoutes)

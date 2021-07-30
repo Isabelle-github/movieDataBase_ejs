@@ -1,9 +1,9 @@
 // Alle Funktionen, die mit den CatRoutes zu tun haben
 
 const Movie_Item = require('../models/movies.js')
-
+const appName = 'MMDB'
 const movie_add_get = (req, res) => {
-    res.render('addMovie')
+    res.render('addMovie', { myPageTitle: `${appName}|ADD MOVIE` })
 }
 const movie_add_post = (req, res) => {
     console.log(req.body)
