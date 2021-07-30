@@ -110,6 +110,10 @@ body main #home_allMovies article figure figcaption p:nth-of-type(2) {
   color: #439d8f;
 }
 
+body main #movie_detail {
+  color: #FFFFFF;
+}
+
 body main #addMovie {
   /* FORM */
 }

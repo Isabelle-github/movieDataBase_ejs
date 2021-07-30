@@ -22,7 +22,7 @@ const favoriteMovRoutes = require('./routes/favoriteMovRoutes')
 
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
-console.log(process.env.DB_URI)
+// console.log(process.env.DB_URI)
 
 app.get('/', (req, res) => {
     Movie_Item.find()

@@ -10,6 +10,7 @@ console.log(movieControlers)
 // da wir das /cats schon aus dem Server bekommen hier nur / !!!
 router.get('/addMovie', movieControlers.movie_add_get)
 router.post('/addMovie', movieControlers.movie_add_post)
+router.get('/movieDetail/:id', movieControlers.movie_detail_get)
 
 
 module.exports = router

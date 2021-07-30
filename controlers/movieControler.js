@@ -15,6 +15,19 @@ const movie_add_post = (req, res) => {
             res.end()
         })
 }
+const movie_detail_get = (req, res) => {
+    console.log(req.params.id)
+    Movie_Item.findById(req.params.id)
+        .then((result) => {
+            console.log(result)
+            res.render('movieDetail', { myPageTitle: `${appName}|MOVIE DETAIL`, movieFound: result })
+        })
+        .catch((err) => {
+            res.send(err)
+            console.log(err)
+        })
+
+}
 
 module.exports = {
     // key: etwas
@@ -22,5 +35,6 @@ module.exports = {
     // etwas
 
     movie_add_get,
-    movie_add_post
+    movie_add_post,
+    movie_detail_get
 }
