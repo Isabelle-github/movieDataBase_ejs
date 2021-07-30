@@ -25,18 +25,20 @@ app.set('view engine', 'ejs')
 console.log(process.env.DB_URI)
 
 app.get('/', (req, res) => {
-    res.render('index', { myPageTitle: `${appName}|HOME` })
+    Movie_Item.find()
+        .then(result => {
+            // console.log(result)
+            res.render('index', { myPageTitle: `${appName}|HOME`, movieData: result })
+        })
+        .catch(err => console.log(err))
+
 })
 // app.get('/addMovie', (req, res) => {
 //     res.render('addMovie', { myPageTitle: `${appName}|HOME` })
 // })
-// app.post('/addMovie', (req, res) => {
-//     console.log(req.body)
-//     const Movie = new Movie_Item(req.body)
-//     Movie.save()
-//         .then(result => res.redirect('/'))
-//         .catch(err => console.log(err))
-// })
+app.post('/addMovie', (req, res) => {
+
+})
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {

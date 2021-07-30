@@ -74,6 +74,31 @@ body{
     main{
         min-height: 100vh;
         padding: 2em 4em;
+        #home_allMovies{
+            display: grid;
+            // border-style: solid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3em;
+            color: $white-color;
+            article{
+                // border-style: solid;
+                padding: 2em;
+                figure{
+                    width: 100%;
+                    a{
+                        img{
+                            width: 100%;
+                            object-fit: fill;
+                        }
+                    }
+                    figcaption{
+                        p:nth-of-type(2){
+                            color: $green-color;
+                        }
+                    }
+                }
+            }
+        }
         
         #addMovie{
             /* FORM */

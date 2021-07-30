@@ -83,6 +83,33 @@ body main {
   padding: 2em 4em;
 }
 
+body main #home_allMovies {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
+  color: #FFFFFF;
+}
+
+body main #home_allMovies article {
+  padding: 2em;
+}
+
+body main #home_allMovies article figure {
+  width: 100%;
+}
+
+body main #home_allMovies article figure a img {
+  width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+body main #home_allMovies article figure figcaption p:nth-of-type(2) {
+  color: #439d8f;
+}
+
 body main #addMovie {
   /* FORM */
 }
