@@ -44,6 +44,42 @@ const movie_detail_get = (req, res) => {
         })
 
 }
+const movie_add_favorite = (req, res) => {
+    console.log(req.params.id)
+    const currentMovie = Movie_Item.where({ _id: req.params.id });
+    console.log(currentMovie)
+    currentMovie.update({ $set: { isFavorite: true } }).exec()
+    console.log('movie added as favorite')
+    res.redirect('/')
+    //     .then((result) => {
+    //         console.log('movie added as favorite')
+    //         console.log(result)
+    //         res.render('movieDetail', { myPageTitle: `${appName}|MOVIE DETAIL`, movieFound: currentMovie })
+    //     })
+    //     .catch((err) => {
+    //         res.send(err)
+    //         console.log(err)
+    //     })
+
+}
+const movie_remove_favorite = (req, res) => {
+    console.log(req.params.id)
+    const currentMovie = Movie_Item.where({ _id: req.params.id });
+    console.log(currentMovie)
+    currentMovie.update({ $set: { isFavorite: false } }).exec()
+    console.log('movie removed from favorite')
+    res.redirect('/')
+    //     .then((result) => {
+    //         console.log('movie added as favorite')
+    //         console.log(result)
+    //         res.render('movieDetail', { myPageTitle: `${appName}|MOVIE DETAIL`, movieFound: currentMovie })
+    //     })
+    //     .catch((err) => {
+    //         res.send(err)
+    //         console.log(err)
+    //     })
+
+}
 
 module.exports = {
     // key: etwas
@@ -52,5 +88,7 @@ module.exports = {
 
     movie_add_get,
     movie_add_post,
-    movie_detail_get
+    movie_detail_get,
+    movie_add_favorite,
+    movie_remove_favorite
 }

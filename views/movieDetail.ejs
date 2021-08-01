@@ -24,33 +24,39 @@
                     <h3>
                         <%= movieFound.year %> | <%= movieFound.director %>
                     </h3>
-                    <a href="/">Add to Favorites</a>
-                    <a href="/">Edit Movie</a>
-                    <article>
-                        <figure>
-                            <img src=<%=movieFound.movieposter %> alt="img">
-                            <figcaption>
-                                <p>Rating: <%= movieFound.rate %>
-                                </p>
-                                <p>
-                                    Duration: <%= movieFound.duration %>
-                                </p>
-                            </figcaption>
-                        </figure>
-                        <div>
-                            <p>
-                                <% movieFound.genre.forEach(ele=> { %>
-                                    <span>
-                                        <%= ele %>
-                                    </span>
-                                    <% }) %>
-                            </p>
-                            <h1>Story</h1>
-                            <p>
-                                <%= movieFound.description %>
-                            </p>
-                        </div>
-                    </article>
+                    <% if (movieFound.isFavorite) { %>
+                        <a href='/movieDetail/<%= movieFound._id %>/removeFavorite'>Remove from Favorites</a>
+
+                        <% } else { %>
+                            <a href='/movieDetail/<%= movieFound._id %>/addFavorite'>Add to Favorites</a>
+                            <% } %>
+
+                                <a href="/">Edit Movie</a>
+                                <article>
+                                    <figure>
+                                        <img src=<%=movieFound.movieposter %> alt="img">
+                                        <figcaption>
+                                            <p>Rating: <%= movieFound.rate %>
+                                            </p>
+                                            <p>
+                                                Duration: <%= movieFound.duration %>
+                                            </p>
+                                        </figcaption>
+                                    </figure>
+                                    <div>
+                                        <p>
+                                            <% movieFound.genre.forEach(ele=> { %>
+                                                <span>
+                                                    <%= ele %>
+                                                </span>
+                                                <% }) %>
+                                        </p>
+                                        <h1>Story</h1>
+                                        <p>
+                                            <%= movieFound.description %>
+                                        </p>
+                                    </div>
+                                </article>
                 </section>
 
             </main>

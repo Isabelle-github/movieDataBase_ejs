@@ -9,7 +9,7 @@ console.log(favoritesControlers)
 // das /cats wird von unserem server durch app.use('/cats', catRoutes) vorausgesetzt
 // da wir das /cats schon aus dem Server bekommen hier nur / !!!
 router.get('/favorites', favoritesControlers.favorite_get)
-
+// router.post('/favorites', favoritesControlers.favorite_post)
 
 
 module.exports = router

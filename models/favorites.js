@@ -18,7 +18,7 @@ const Schema = mongoose.Schema
 //         required: true
 //     }
 // })
-const movieSchema = new Schema({
+const favoriteSchema = new Schema({
     title: {
         type: String,
         required: true
@@ -50,16 +50,10 @@ const movieSchema = new Schema({
     description: {
         type: String,
         required: true
-    },
-    isFavorite: {
-        type: Boolean,
-        required: true,
-        default: false,
-        required: true
     }
 }, { timestamps: true })
 
 // mongoose wandelt den String in Kleinbuchstaben um!!!!
-const Movie_Item = mongoose.model('movie_item', movieSchema)
+const Favorite_Item = mongoose.model('favorite_item', favoriteSchema)
 
-module.exports = Movie_Item
+module.exports = Favorite_Item
