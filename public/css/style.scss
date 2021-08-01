@@ -101,9 +101,54 @@ body{
         }
         #movie_detail{
             color: $white-color;
+            h1{
+                color: $pink-color;
+            }
+            h3{
+                margin-bottom: 2em;
+            }
+            a{
+                border: $yellow-color solid 2px;
+                text-decoration: none;
+                color: $yellow-color;
+                padding: 0.5em;
+                border-radius: 1em;
+                
+            }
+            article{
+                padding-top: 2em;
+                display: flex;
+                figure{
+                    width: 50%;
+                    padding-right: 2em;
+                    img{
+                        width: 100%;
+                        object-fit: fill;
+                    }
+                    figcaption{
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                }
+                div{
+                    width: 50%;
+                   p{
+                       span{
+                           background-color: $green-color;
+                           border-radius: 1em;
+                           padding: 0.5em;
+                           margin-right: 0.5em;
+                       }
+                   }
+                   h1{
+                       color: $pink-color;
+                       padding: 2em 0;
+                   }
+                }
+            }
         }
         
-        #addMovie{
+        #addMovies{
             /* FORM */
             form{
                 width: 70%;

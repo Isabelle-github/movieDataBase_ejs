@@ -9,7 +9,7 @@ console.log(movieControlers)
 // das /cats wird von unserem server durch app.use('/cats', catRoutes) vorausgesetzt
 // da wir das /cats schon aus dem Server bekommen hier nur / !!!
 router.get('/addMovie', movieControlers.movie_add_get)
-router.post('/addMovie', movieControlers.movie_add_post)
+router.post('/addMovie/send', movieControlers.movie_add_post)
 router.get('/movieDetail/:id', movieControlers.movie_detail_get)
 
 

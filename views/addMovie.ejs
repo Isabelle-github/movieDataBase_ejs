@@ -14,15 +14,20 @@
 <body>
     <%- include('./partials/head') %>
         <main>
-            <h1>add movies</h1>
-            <!-- <form action="/" method="POST">
-        <input type="text" name='title' placeholder="Title" required>
-        <input type="text" name='urlPicture' placeholder="Picture for Article" required>
-        <input type="text" name='author' placeholder="Author Name" required>
-        <input type="url" name='authorPic' placeholder="Picture of the Author" required>
-        <input type="message" name='text' placeholder="Your Article" required>
-        <input type="submit" value="SEND ARTICLE">
-    </form> -->
+            <section id="addMovies">
+                <h1>Add your own movies</h1>
+                <form action='/addMovie/send' method="POST">
+                    <input type="text" name='title' placeholder="Title" required>
+                    <input type="number" name='year' placeholder="Year of release" required>
+                    <input type="text" name='director' placeholder="Director's Name" required>
+                    <input type="text" name='duration' placeholder="Duration" required>
+                    <input type="text" name='genre' placeholder="Genre" required>
+                    <input type="number" name='rate' placeholder="Rating" required>
+                    <input type="url" name='movieposter' placeholder="Url to the Movie Poster" required>
+                    <input type="message" name="description" placeholder="Movie Decription" required>
+                    <input type="submit" value="SEND">
+                </form>
+            </section>
         </main>
         <%- include('./partials/foot') %>
 </body>

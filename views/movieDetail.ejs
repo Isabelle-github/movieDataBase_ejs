@@ -26,29 +26,31 @@
                     </h3>
                     <a href="/">Add to Favorites</a>
                     <a href="/">Edit Movie</a>
-                    <figure>
-                        <img src=<%=movieFound.movieposter %> alt="img">
-                        <figcaption>
-                            <p>Rating: <%= movieFound.rate %>
-                            </p>
+                    <article>
+                        <figure>
+                            <img src=<%=movieFound.movieposter %> alt="img">
+                            <figcaption>
+                                <p>Rating: <%= movieFound.rate %>
+                                </p>
+                                <p>
+                                    Duration: <%= movieFound.duration %>
+                                </p>
+                            </figcaption>
+                        </figure>
+                        <div>
                             <p>
-                                Duration: <%= movieFound.duration %>
+                                <% movieFound.genre.forEach(ele=> { %>
+                                    <span>
+                                        <%= ele %>
+                                    </span>
+                                    <% }) %>
                             </p>
-                        </figcaption>
-                    </figure>
-                    <div>
-                        <p>
-                            <% movieFound.genre.forEach(ele=> { %>
-                                <span>
-                                    <%= ele %>
-                                </span>
-                                <% }) %>
-                        </p>
-                        <h1>Story</h1>
-                        <p>
-                            <%= movieFound.description %>
-                        </p>
-                    </div>
+                            <h1>Story</h1>
+                            <p>
+                                <%= movieFound.description %>
+                            </p>
+                        </div>
+                    </article>
                 </section>
 
             </main>
