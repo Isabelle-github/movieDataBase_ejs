@@ -25,13 +25,15 @@
                         <%= movieFound.year %> | <%= movieFound.director %>
                     </h3>
                     <% if (movieFound.isFavorite) { %>
-                        <a href='/movieDetail/<%= movieFound._id %>/removeFavorite'>Remove from Favorites</a>
+                        <a class="ancher_yellow" href='/movieDetail/<%= movieFound._id %>/removeFavorite'>Remove from
+                            Favorites</a>
 
                         <% } else { %>
-                            <a href='/movieDetail/<%= movieFound._id %>/addFavorite'>Add to Favorites</a>
+                            <a class="ancher_yellow" href='/movieDetail/<%= movieFound._id %>/addFavorite'>Add to
+                                Favorites</a>
                             <% } %>
 
-                                <a href="/">Edit Movie</a>
+                                <a class="ancher_green" href="/">Edit Movie</a>
                                 <article>
                                     <figure>
                                         <img src=<%=movieFound.movieposter %> alt="img">

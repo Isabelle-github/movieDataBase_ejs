@@ -94,9 +94,19 @@ body{
                     figcaption{
                         p:nth-of-type(2){
                             color: $green-color;
+                            margin-bottom: 1em;
                         }
                     }
                 }
+                .ancher_yellow{
+                    border: $yellow-color solid 2px;
+                    text-decoration: none;
+                    color: $yellow-color;
+                    padding: 0.5em;
+                    border-radius: 1em;
+                    
+                }
+            
             }
         }
         #movie_detail{
@@ -107,10 +117,18 @@ body{
             h3{
                 margin-bottom: 2em;
             }
-            a{
+            .ancher_yellow{
                 border: $yellow-color solid 2px;
                 text-decoration: none;
                 color: $yellow-color;
+                padding: 0.5em;
+                border-radius: 1em;
+                
+            }
+            .ancher_green{
+                border: $green-color solid 2px;
+                text-decoration: none;
+                color: $green-color;
                 padding: 0.5em;
                 border-radius: 1em;
                 

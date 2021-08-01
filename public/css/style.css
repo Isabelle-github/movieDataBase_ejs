@@ -108,6 +108,15 @@ body main #home_allMovies article figure a img {
 
 body main #home_allMovies article figure figcaption p:nth-of-type(2) {
   color: #439d8f;
+  margin-bottom: 1em;
+}
+
+body main #home_allMovies article .ancher_yellow {
+  border: #e9c46a solid 2px;
+  text-decoration: none;
+  color: #e9c46a;
+  padding: 0.5em;
+  border-radius: 1em;
 }
 
 body main #movie_detail {
@@ -122,10 +131,18 @@ body main #movie_detail h3 {
   margin-bottom: 2em;
 }
 
-body main #movie_detail a {
+body main #movie_detail .ancher_yellow {
   border: #e9c46a solid 2px;
   text-decoration: none;
   color: #e9c46a;
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+body main #movie_detail .ancher_green {
+  border: #439d8f solid 2px;
+  text-decoration: none;
+  color: #439d8f;
   padding: 0.5em;
   border-radius: 1em;
 }

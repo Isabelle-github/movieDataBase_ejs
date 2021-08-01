@@ -50,7 +50,7 @@ const movie_add_favorite = (req, res) => {
     console.log(currentMovie)
     currentMovie.update({ $set: { isFavorite: true } }).exec()
     console.log('movie added as favorite')
-    res.redirect('/')
+    res.redirect('/favorites')
     //     .then((result) => {
     //         console.log('movie added as favorite')
     //         console.log(result)
@@ -68,7 +68,7 @@ const movie_remove_favorite = (req, res) => {
     console.log(currentMovie)
     currentMovie.update({ $set: { isFavorite: false } }).exec()
     console.log('movie removed from favorite')
-    res.redirect('/')
+    res.redirect('/favorites')
     //     .then((result) => {
     //         console.log('movie added as favorite')
     //         console.log(result)

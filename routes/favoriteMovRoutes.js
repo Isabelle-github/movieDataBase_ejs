@@ -8,8 +8,9 @@ console.log(favoritesControlers)
 // app wird durch Router ersetzt
 // das /cats wird von unserem server durch app.use('/cats', catRoutes) vorausgesetzt
 // da wir das /cats schon aus dem Server bekommen hier nur / !!!
-router.get('/favorites', favoritesControlers.favorite_get)
-// router.post('/favorites', favoritesControlers.favorite_post)
+
+// router.get('/favorites', favoritesControlers.favorite_get)
+router.get('/favorites', favoritesControlers.movie_favorites_get)
 
 
 module.exports = router

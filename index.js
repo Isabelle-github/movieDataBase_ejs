@@ -36,9 +36,9 @@ app.get('/', (req, res) => {
 // app.get('/addMovie', (req, res) => {
 //     res.render('addMovie', { myPageTitle: `${appName}|HOME` })
 // })
-app.post('/addMovie', (req, res) => {
+// app.post('/addMovie', (req, res) => {
 
-})
+// })
 
 mongoose.connect(process.env.DB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then((result) => {
