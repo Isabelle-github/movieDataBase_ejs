@@ -80,6 +80,9 @@ const movie_remove_favorite = (req, res) => {
     //     })
 
 }
+const movie_edit_get = (req, res) => {
+    res.render('editMovie', { myPageTitle: `${appName}|EDIT MOVIE` })
+}
 
 module.exports = {
     // key: etwas
@@ -90,5 +93,6 @@ module.exports = {
     movie_add_post,
     movie_detail_get,
     movie_add_favorite,
-    movie_remove_favorite
+    movie_remove_favorite,
+    movie_edit_get
 }
