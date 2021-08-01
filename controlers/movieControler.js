@@ -81,7 +81,32 @@ const movie_remove_favorite = (req, res) => {
 
 }
 const movie_edit_get = (req, res) => {
-    res.render('editMovie', { myPageTitle: `${appName}|EDIT MOVIE` })
+    console.log(req.params.id)
+    Movie_Item.findById(req.params.id)
+        .then((result) => {
+            console.log(result)
+            res.render('editMovie', { myPageTitle: `${appName}|EDIT MOVIE`, currentMovie: result })
+        })
+        .catch((err) => {
+            res.send(err)
+            console.log(err)
+        })
+
+}
+const movie_edit_post = (req, res) => {
+    console.log('new edit request sent')
+    const Movie = Movie_Item.findByIdAndUpdate(req.params.id, req.body)
+        .then(result => {
+            console.log('movie added to db')
+            console.log(result)
+            // res.redirect('/')
+            res.render(`movieDetail`, { myPageTitle: `${appName}|MOVIE DETAIL`, movieFound: result })
+        })
+        .catch(err => {
+            console.log(err)
+            res.end()
+        })
+
 }
 
 module.exports = {
@@ -94,5 +119,6 @@ module.exports = {
     movie_detail_get,
     movie_add_favorite,
     movie_remove_favorite,
-    movie_edit_get
+    movie_edit_get,
+    movie_edit_post
 }

@@ -14,7 +14,7 @@ router.get('/movieDetail/:id', movieControlers.movie_detail_get)
 router.get('/movieDetail/:id/addFavorite', movieControlers.movie_add_favorite)
 router.get('/movieDetail/:id/removeFavorite', movieControlers.movie_remove_favorite)
 router.get('/movieDetail/:id/editMovie', movieControlers.movie_edit_get)
-// router.post('/movieDetail/:id/editMovie', movieControlers.movie_edit_post)
+router.post('/movieDetail/:id/editMovie', movieControlers.movie_edit_post)
 
 
 module.exports = router

@@ -16,11 +16,14 @@
         <main>
             <section id="addMovies">
                 <h1>Edit movie</h1>
-                <form action='/addMovie/send' method="POST">
-                    <input type="text" name='title' placeholder="Title" required>
-                    <input type="number" name='year' placeholder="Year of release" required>
-                    <input type="text" name='director' placeholder="Director's Name" required>
-                    <input type="text" name='duration' placeholder="Duration" required>
+                <form action='/movieDetail/<%=currentMovie._id %>/editMovie' method="POST">
+                    <input type="text" name='title' placeholder="Title" required value=<%=currentMovie.title %> >
+                    <input type="number" name='year' placeholder="Year of release" required value=<%=currentMovie.year
+                        %>>
+                    <input type="text" name='director' placeholder="Director's Name" required
+                        value=<%=currentMovie.director %>>
+                    <input type="text" name='duration' placeholder="Duration" required value=<%=currentMovie.duration
+                        %>>
                     <label for="genre"> Select genres</label>
 
                     <select name="genre" id="genres" multiple>
@@ -30,9 +33,11 @@
                         <option value="horror">horror</option>
                     </select>
 
-                    <input type="number" name='rate' placeholder="Rating" required>
-                    <input type="url" name='movieposter' placeholder="Url to the Movie Poster" required>
-                    <input type="message" name="description" placeholder="Movie Decription" required>
+                    <input type="number" name='rate' placeholder="Rating" required value=<%=currentMovie.rate %>>
+                    <input type="url" name='movieposter' placeholder="Url to the Movie Poster" required
+                        value=<%=currentMovie.movieposter %>>
+                    <input type="message" name="description" placeholder="Movie Decription" required
+                        value=<%=currentMovie.description %>>
                     <input type="submit" value="SEND">
                 </form>
 
