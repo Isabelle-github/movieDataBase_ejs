@@ -52,6 +52,7 @@ body{
                    border-radius: 1em;
                    outline: none;
                    border: solid $green-color 3px;
+                   color: $white-color;
                 }
                 input:focus{
                     outline: none;
@@ -173,8 +174,18 @@ body{
                 display: flex;
                 flex-direction: column;
                 margin: 2em auto;
-                input{
+                input, select{
+                    background-color: $dark-color;
                     padding: 1em;
+                    border-radius: 1em;
+                    outline: none;
+                    border: solid $green-color 3px;
+                    color: $white-color;
+                }
+               
+                input:nth-last-of-type(2){
+                   word-wrap: break-word;
+                   height: 10em; 
                 }
                 input:last-of-type{
                     color: $dark-color;

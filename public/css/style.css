@@ -59,6 +59,7 @@ body header nav form input {
   border-radius: 1em;
   outline: none;
   border: solid #439d8f 3px;
+  color: #FFFFFF;
 }
 
 body header nav form input:focus {
@@ -206,8 +207,18 @@ body main #addMovies form {
   margin: 2em auto;
 }
 
-body main #addMovies form input {
+body main #addMovies form input, body main #addMovies form select {
+  background-color: #274753;
   padding: 1em;
+  border-radius: 1em;
+  outline: none;
+  border: solid #439d8f 3px;
+  color: #FFFFFF;
+}
+
+body main #addMovies form input:nth-last-of-type(2) {
+  word-wrap: break-word;
+  height: 10em;
 }
 
 body main #addMovies form input:last-of-type {
